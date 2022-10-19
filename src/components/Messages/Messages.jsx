@@ -1,9 +1,13 @@
 import styles from './Messages.module.scss';
+import { useSelector } from 'react-redux';
 
-function Messages({ data }) {
+function Messages() {
+
+    const messages = useSelector(state => state.messages);
+
     return(
         <div className={styles.container}>
-            {data && data.map((el, index)=><p key={`message_${index}`}>{el}</p>)}
+            {messages && messages.map((el)=><p key={`message_${el.id}`}>{el.text}</p>)}
         </div>
     );
 }
