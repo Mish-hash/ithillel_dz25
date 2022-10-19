@@ -4,7 +4,7 @@ import SocketClient from './components/SocketClient';
 function App() {
   return (
     <div className="App">
-      <h3>Hello Socket Client</h3>
+      <h3>ДЗ 25. Простейшие соедениенния по сокетам</h3>
       <SocketClient/>
     </div>
   );
